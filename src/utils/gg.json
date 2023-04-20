@@ -1,0 +1,10 @@
+{
+	"web": {
+		"client_id": "751220910520-fklejgqjf74s0n7m3mj78ervnoja1kl7.apps.googleusercontent.com",
+		"project_id": "direct-hallway-339320",
+		"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+		"token_uri": "https://oauth2.googleapis.com/token",
+		"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+		"client_secret": "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"
+	}
+}
