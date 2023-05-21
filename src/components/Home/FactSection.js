@@ -2,10 +2,7 @@ import Curvy from "@/assests/curvy";
 import Image from "next/image";
 import React from "react";
 import yarn from "../../assests/facts/yarn.png";
-import windmill from "../../assests/facts/windmill.png";
-import rating from "../../assests/facts/rating.png";
 import shirt from "../../assests/facts/shirt.png";
-import jeans from "../../assests/facts/jeans.png";
 import fabric from "../../assests/facts/fabric.png";
 import Fade from "react-reveal/Fade";
 export default function FactSection() {
@@ -13,38 +10,20 @@ export default function FactSection() {
 		{
 			title: "Yarn Production",
 			image: yarn,
-			value: "33,000 tons",
+			value: "700 tons",
 			message: `Yarn / year`,
 		},
 		{
 			title: "Fabric Production",
 			image: fabric,
-			value: "28,800 tons",
-			message: `Cotton fabric / year`,
+			value: "60,00000 meters",
+			message: `Fabric / year`,
 		},
 		{
 			title: "Knitted Garments",
 			image: shirt,
-			value: "20,000 Pieces",
+			value: "32,00000 Pieces",
 			message: `Of knitted garments / day`,
-		},
-		{
-			title: "Woven Garments ",
-			image: jeans,
-			value: "16,000",
-			message: `Pieces of woven garments / day`,
-		},
-		{
-			title: "Wind Energy Usage",
-			image: windmill,
-			value: "42.33 MW",
-			message: `Our power is wind power`,
-		},
-		{
-			title: "Employees",
-			image: rating,
-			value: "7,500",
-			message: `Total number of happy employees`,
 		},
 	];
 	return (

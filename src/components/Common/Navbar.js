@@ -2,8 +2,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Fade from "react-reveal/Fade";
-import logo from "../../assests/lg.jpeg";
 import Link from "next/link";
+import constants from "@/utils/constants";
 
 const Navbar = () => {
 	const [mobileNav, setMobileNav] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = () => {
 		{ id: 1, text: "Home", to: "/" },
 		{ id: 2, text: "About Us", to: "/about-us" },
 		{ id: 3, text: "Categories", to: "/categories" },
-		{ id: 3, text: "Products", to: "/products" },
+		// { id: 3, text: "Products", to: "/products" },
 		{ id: 4, text: "Contact Us", to: "/contact-us" },
 	];
 
@@ -30,9 +30,12 @@ const Navbar = () => {
 					className="flex items-center lg:space-x-8 space-x-4 flex-grow"
 					onClick={() => setMobileNav(false)}
 				>
-					<Image src={logo} alt="logo" className="w-24 h-16" />
-					<h1 className="lg:text-4xl text-xl font-Fatface text-gray-900 select-none">
-						SP Silk Mills
+					{/* <div className="bg-black rounded-3xl"> */}
+					<Image src={constants.logo} alt="logo" className="w-24 h-16" />
+					{/* </div> */}
+
+					<h1 className="lg:text-4xl text-md font-Fatface text-gray-900 select-none">
+						{constants.name}
 					</h1>
 				</Link>
 				{/* </div> */}
@@ -43,9 +46,9 @@ const Navbar = () => {
 						{menu.map((item) => (
 							<li key={item.id}>
 								<Link href={item.to} className="text-xl">
-									<p class="relative w-max one">
+									<p className="relative w-max one">
 										<span>{item.text}</span>
-										<span class="absolute duration-300 -bottom-1 left-0 w-0 transition-all h-1 bg-yellow-400"></span>
+										<span className="absolute duration-300 -bottom-1 left-0 w-0 transition-all h-1 bg-yellow-400"></span>
 									</p>
 								</Link>
 								{/* {item.text} */}

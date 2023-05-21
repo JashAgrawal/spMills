@@ -13,15 +13,19 @@ export default function MessageBanner(props) {
 			<div
 				className={`relative flex max-w-[${props.width || "100vw"}]  max-h-[${
 					props.height || "70vh"
-				}] rounded-xl justify-center  overflow-hidden`}
+				}] justify-center  overflow-hidden`}
 			>
 				<Image
 					src={props.image || handShake}
-					className={`opacity-60 lg:h-[70vh] sm:h-[50vh] w-full rounded-xl object-cover`}
+					className={`opacity-90 lg:h-[${
+						props.height || 70
+					}vh] sm:h-[50vh] w-full  object-top object-cover`}
 					alt="sa"
 				/>
 				<div className="flex w-full h-full overflow-hidden space-y-8 flex-col items-center justify-center absolute top-0 left-0">
-					<h1 className="text-5xl  font-regular">{props.message}</h1>
+					<h1 className="text-5xl lg:pt-24 text-white font-regular">
+						{props.message}
+					</h1>
 
 					{props.buttonText && <Button text={props.buttonText} />}
 				</div>

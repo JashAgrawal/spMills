@@ -1,43 +1,42 @@
 import Button from "@/components/Common/Button";
 import Image from "next/image";
 import React from "react";
-import handShake from "../assests/hd.jpg";
+// import handShake from "../assests/hd.jpg";
+import aboutUs from "@/assests/about-us.jpeg";
 import MessageBanner from "@/components/Common/MessageBanner";
+import FounderInfo from "@/components/about-us/FounderInfo";
+import constants from "@/utils/constants";
 export default function AboutUs() {
 	return (
 		<div>
-			<MessageBanner message="About Us" />
-			<div className="w-full text-center lg:p-24 lg:px-40 py-8 px-12 lg:text-2xl text-sm tracking-wide leading-relaxed">
+			<MessageBanner image={aboutUs} message="About Us" />
+			<div className="w-full text-center lg:p-24 lg:px-40 py-8 px-12 flex flex-col justify-center items-center lg:text-2xl text-sm tracking-wide leading-relaxed">
 				<span className="text-accent w-full text-left font-medium text-xl lg:text-4xl">
-					Surya Prakash Silk Mills
-				</span>{" "}
-				is a textile company that stands out for its exceptional quality uniform
-				fabrics. With a rich history dating back several decades, the company
-				has been a leading provider of high-quality products to customers across
-				India. Surya Prakash Silk Mills has a wide range of uniform products to
-				suit every need. Whether you{"'"}re looking for traditional designs or
-				contemporary styles, you{"'"}re sure to find something that catches your
-				eye.
+					Shri Vaktavarmal Pokarchand Jain
+				</span>
+				at the age of 17 yrs used to sell onions and potatoes in Sewri,Mumbai to
+				earn his bread and butter once visited Bhiwandi to meet his friend.
+				Here, he was attracted to the textile industry which pulled him to shift
+				here and learn about manufacturing of fabrics. he started this business
+				with 6 powerlooms and a rented shed of 600 sqft and a capital of 10000
+				Rupees in Bhiwandi.
 				<br />
-				<br /> One of the key features of Surya Prakash Silk Mills is its
-				commitment to quality. Every product is made using the finest quality
-				yarns, ensuring that customers receive only the best. The company also
-				employs skilled artisans who use traditional techniques to create
-				beautiful, intricate designs that are both unique and timeless. <br />
 				<br />
-				Another great aspect of Surya Prakash Silk Mills is its dedication to
-				customer satisfaction. <br />
-				The company places a high priority on ensuring that every customer is
-				happy with their purchase, and goes above and beyond to provide
-				excellent customer service. Whether you have a question about a product
-				or need assistance with an order, the Surya Prakash Silk Mills team is
-				always ready to help. <br />
+				Currently Mr. Prakash Vaktavarmal Jain along with his sons are
+				forwarding the dreams built by Mr. Vaktavarmal Pokarchand Jain and
+				running this business with sincerity and dedication. At present, Surya
+				Prakash Silk Mills owns a manufacturing unit of 28000 sqft and a monthly
+				capacity of 500000 Mtrs per month.
 				<br />
-				Overall, Surya Prakash Silk Mills is a company that offers exceptional
-				quality uniform products and outstanding customer service. With a
-				commitment to tradition and a focus on innovation, this company is sure
-				to continue to be a leader in the uniform textile industry for years to
-				come.
+				<br />
+				At present, Surya Prakash Silk Mills severs quality uniform products pan
+				india. Till date we have severed thousands of customers across India.
+				<br />
+				<FounderInfo
+					founderImg={constants.founderImg}
+					founderName={constants.founderName}
+					founderQuote={constants.founderQuote}
+				/>
 			</div>
 		</div>
 	);

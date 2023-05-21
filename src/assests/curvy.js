@@ -5,7 +5,7 @@ export default function Curvy({ color, direction, classes }) {
 	return (
 		<>
 			<div
-				class={`custom-shape-divider-top-1680440683 w-full ${
+				className={`custom-shape-divider-top-1680440683 w-full ${
 					direction === "up" ? "rotate-180" : ""
 				} ${classes}`}
 			>

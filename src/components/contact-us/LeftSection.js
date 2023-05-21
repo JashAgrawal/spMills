@@ -5,25 +5,25 @@ export default function LeftSection() {
 	const currentColor = "#fb923c";
 	return (
 		<div>
-			<div class="flex flex-col justify-between">
+			<div className="flex flex-col justify-between">
 				<div>
-					<h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+					<h2 className="text-4xl lg:text-5xl font-bold leading-tight">
 						Lets talk about Everything!
 					</h2>
-					<div class="text-gray-700 mt-8">
+					<div className="text-gray-700 mt-8">
 						Hate forms? Send us an{" "}
 						<a
 							href={`https://mail.google.com/mail/?view=cm&fs=1&to=${constants.email}`}
-							class="underline"
+							className="underline"
 						>
 							email
 						</a>{" "}
 						instead.
 					</div>
 				</div>
-				<div class="mt-8 text-center">
+				<div className="mt-8 text-center">
 					<svg
-						class="w-full"
+						className="w-full"
 						id="ae37f038-3a9e-4b82-ad68-fc94ba16af2a"
 						data-name="Layer 1"
 						viewBox="0 0 1096 574.74"

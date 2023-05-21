@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../Common/Button";
+import Link from "next/link";
 
 export default function ImageBanner(props) {
 	return (
@@ -13,11 +14,16 @@ export default function ImageBanner(props) {
 				/>
 				<div className="flex w-full h-full overflow-hidden lg:space-y-8 space-y-4 flex-col items-center justify-center absolute top-0 left-0">
 					{props.messageText && (
-						<h1 className="lg:text-4xl text-2xl font-semibold ">
+						<h1
+							style={{ textShadow: "2px 5px #000" }}
+							className="lg:text-6xl text-white drop-shadow-xl shadow-black text-2xl font-semibold "
+						>
 							{props.messageText}
 						</h1>
 					)}
-					{props.buttonText && <Button text="Contact Us" />}
+					<Link href="contact-us">
+						{props.buttonText && <Button text="Contact Us" />}
+					</Link>
 				</div>
 			</div>
 		</div>
