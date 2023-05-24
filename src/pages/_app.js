@@ -4,14 +4,37 @@ import Navbar from "@/components/Common/Navbar";
 import "@/styles/globals.css";
 // import "bootstrap/dist/css/bootstrap.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useRouter } from "next/router";
+import Loading from "@/components/loading/loading";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }) {
-	return (
-		<>
-			<Navbar />
-			<HeadComp />
-			<Component {...pageProps} />
-			<Footer />
-		</>
-	);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    router.events.on("routeChangeError", (e) => setLoading(false));
+    router.events.on("routeChangeStart", (e) => setLoading(true));
+    router.events.on("routeChangeComplete", (e) => setLoading(false));
+
+    return () => {
+      router.events.off("routeChangeError", (e) => setLoading(false));
+      router.events.off("routeChangeStart", (e) => setLoading(true));
+      router.events.off("routeChangeComplete", (e) => setLoading(false));
+    };
+  }, [router.events]);
+  return (
+    <>
+      <Navbar />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <HeadComp />
+          <Component {...pageProps} />
+          <Footer />
+        </>
+      )}
+    </>
+  );
 }
