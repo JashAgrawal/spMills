@@ -78,9 +78,8 @@ const Navbar = () => {
           <nav className="fixed z-20 w-[96%] bg-white shadow-lg mx-[2%] mt-2 rounded-lg border border-gray-300 p-4 block md:hidden lg:hidden">
             <ul>
               {menu.map((item, idx) => (
-                <Fade right delay={(idx + 1) * 100}>
+                <Fade key={item.id} right delay={(idx + 1) * 100}>
                   <Link
-                    key={item.id}
                     href={item.to}
                     className="text-gray-600 text-lg"
                     onClick={() => setMobileNav(false)}
