@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 * {
-    font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .one:hover span:last-child {
-    width: 100%;
+  width: 100%;
+}
+
+.transparent {
+  background: transparent;
 }

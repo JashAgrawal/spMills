@@ -23,113 +23,114 @@ import logo from "@/assests/logoo.jpeg";
 import sales from "@/assests/salesOffice.jpeg";
 import mills from "@/assests/mill.jpeg";
 const constants = {
-	mobile: 9665996865,
-	name: "Surya Prakash Silk Mills",
-	link: "https://suryaprakashsilkmills.com/",
-	address: "",
-	email: "suryaprakashsilkmills7@gmail.com",
-	logo: logo,
-	founderImg: Founder,
-	founderName: "Prakash Vaktavarmal Jain",
-	founderQuote:
-		"सब कुछ खोने से भी बुरा होता है उस उम्मीद को खोना जिसके बलबुते हम वो सब कुछ वापस हासिल कर सकते है ।",
+  mobile: 9665996865,
+  name: "Surya Prakash Silk Mills",
+  link: "https://suryaprakashsilkmills.com/",
+  address: "",
+  email: "suryaprakashsilkmills7@gmail.com",
+  logo: logo,
+  founderImg: Founder,
+  founderName: "Prakash Vaktavarmal Jain",
+  founderQuote:
+    "सब कुछ खोने से भी बुरा होता है उस उम्मीद को खोना जिसके बलबुते हम वो सब कुछ वापस हासिल कर सकते है ।",
 };
 export const productCategories = [
-	{
-		categoryID: "1",
-		image: BF1,
-		title: "BOMBAY FILAFIL",
-		path: `/garments`,
-		otherImages: [BF1, BF2],
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
-	{
-		categoryID: "2",
-		image: F3,
-		title: "FILAFIL",
-		path: `/yarn`,
-		otherImages: [F1, F2, F3],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
-	{
-		categoryID: "3",
-		image: FP2,
-		title: "FILAFIL PLUS",
-		path: `/fabric`,
-		otherImages: [FP1, FP2],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc Dyed + 80/300 Dyed",
-	},
-	{
-		categoryID: "123",
-		image: FD1,
-		title: "FILAFIL DOTS",
-		path: `/home-textile`,
-		otherImages: [FD1, FD2],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
-	{
-		categoryID: "123",
-		image: FPR1,
-		title: "FILAFIL PRO",
-		path: `/organic`,
-		otherImages: [FPR1, FPR2, FPR3],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white ",
-	},
-	{
-		categoryID: "123",
-		image: FS1,
-		title: "FOUR SEASON",
-		path: `/organic`,
-		otherImages: [FS1],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
-	{
-		categoryID: "123",
-		image: SM1,
-		title: "SAMRAY",
-		path: `/organic`,
-		otherImages: [SM1],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
-	{
-		categoryID: "123",
-		image: SG2,
-		title: "SIGNATURE",
-		path: `/organic`,
-		otherImages: [SG1, SG2, SG3],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
-	{
-		categoryID: "123",
-		image: SP2,
-		title: "SUPREMO",
-		path: `/organic`,
-		otherImages: [SP1, SP2, SP3],
-
-		details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
-	},
+  {
+    categoryID: "1",
+    image: BF1,
+    title: "BOMBAY FILAFIL",
+    // path: `/garments`,
+    otherImages: [BF1, BF2],
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+    activeIndex: 0,
+  },
+  {
+    categoryID: "2",
+    image: F3,
+    title: "FILAFIL",
+    // path: `/yarn`,
+    otherImages: [F1, F2, F3],
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+    activeIndex: 2,
+  },
+  {
+    categoryID: "3",
+    image: FP2,
+    title: "FILAFIL PLUS",
+    // path: `/fabric`,
+    otherImages: [FP1, FP2],
+    details: "2/80 Pc + 80/300 Dyed x 40pc Dyed + 80/300 Dyed",
+    activeIndex: 1,
+  },
+  {
+    categoryID: "4",
+    image: FD1,
+    title: "FILAFIL DOTS",
+    // path: `/home-textile`,
+    otherImages: [FD1, FD2],
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+    activeIndex: 0,
+  },
+  {
+    categoryID: "5",
+    image: FPR1,
+    title: "FILAFIL PRO",
+    // path: `/organic`,
+    otherImages: [FPR1, FPR2, FPR3],
+    activeIndex: 0,
+    details: "2/80 Pc + 80/300 Dyed x 40pc white ",
+  },
+  {
+    categoryID: "6",
+    image: FS1,
+    title: "FOUR SEASON",
+    // path: `/organic`,
+    otherImages: [FS1],
+    activeIndex: 0,
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+  },
+  {
+    categoryID: "7",
+    image: SM1,
+    title: "SAMRAY",
+    // path: `/organic`,
+    otherImages: [SM1],
+    activeIndex: 0,
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+  },
+  {
+    categoryID: "8",
+    image: SG2,
+    title: "SIGNATURE",
+    // path: `/organic`,
+    otherImages: [SG1, SG2, SG3],
+    activeIndex: 1,
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+  },
+  {
+    categoryID: "9",
+    image: SP2,
+    title: "SUPREMO",
+    // path: `/organic`,
+    otherImages: [SP1, SP2, SP3],
+    activeIndex: 1,
+    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+  },
 ];
 export const address = [
-	{
-		image: mills,
-		name: "Factory Address",
-		map: "https://www.google.com/maps/place/Surya+Prakash+Silk+Mills./@19.2980683,73.0431323,15z/data=!4m6!3m5!1s0x3be7bd7b0681264b:0x5b88da93e1b2e7bb!8m2!3d19.2980683!4d73.0431323!16s%2Fg%2F11qg1485vz?hl=en-GB",
-		address:
-			"898, Kariwali Rd, Subhash Nagar, Kariwali, Bhiwandi, Maharashtra 421308",
-	},
-	{
-		image: sales,
-		name: "Sales Office Address",
-		map: "https://www.google.com/maps/place/Anmol+Textile+Market/@19.2721822,73.0401276,15z/data=!4m15!1m8!3m7!1s0x3be7bc4d4c691129:0x34650c3d32a25b16!2sAnmol+Textile+Market!8m2!3d19.2721822!4d73.0401276!10e5!16s%2Fg%2F1pyqv_pym!3m5!1s0x3be7bc4d4c691129:0x34650c3d32a25b16!8m2!3d19.2721822!4d73.0401276!16s%2Fg%2F1pyqv_pym?hl=en-GB",
-		address: "Agra Rd, Anjurphata, Bhiwandi, Maharashtra 421302",
-	},
+  {
+    image: mills,
+    name: "Factory Address",
+    map: "https://www.google.com/maps/place/Surya+Prakash+Silk+Mills./@19.2980683,73.0431323,15z/data=!4m6!3m5!1s0x3be7bd7b0681264b:0x5b88da93e1b2e7bb!8m2!3d19.2980683!4d73.0431323!16s%2Fg%2F11qg1485vz?hl=en-GB",
+    address:
+      "898, Kariwali Rd, Subhash Nagar, Kariwali, Bhiwandi, Maharashtra 421308",
+  },
+  {
+    image: sales,
+    name: "Sales Office Address",
+    map: "https://www.google.com/maps/place/Anmol+Textile+Market/@19.2721822,73.0401276,15z/data=!4m15!1m8!3m7!1s0x3be7bc4d4c691129:0x34650c3d32a25b16!2sAnmol+Textile+Market!8m2!3d19.2721822!4d73.0401276!10e5!16s%2Fg%2F1pyqv_pym!3m5!1s0x3be7bc4d4c691129:0x34650c3d32a25b16!8m2!3d19.2721822!4d73.0401276!16s%2Fg%2F1pyqv_pym?hl=en-GB",
+    address: "Agra Rd, Anjurphata, Bhiwandi, Maharashtra 421302",
+  },
 ];
+export const toEmail = "suryaprakashsilkmills@gmail.com";
 export default constants;

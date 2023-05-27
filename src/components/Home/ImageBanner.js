@@ -27,7 +27,6 @@ export default function ImageBanner(props) {
           <Link href="contact-us">
             {props.buttonText && (
               <Zoom duration={1500} bottom>
-                {" "}
                 <Button text="Contact Us" />
               </Zoom>
             )}

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
 import constants from "@/utils/constants";
-import { Roll, Fade } from "react-reveal";
+import { Fade } from "react-reveal";
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       {/* desktop nav  */}
-      <nav className="flex border border-b-accent z-20 sticky top-0 items-center lg:px-12 px-6 bg-white border-gray-300 py-3">
+      <nav className="bg-white flex border border-b-accent z-20 py-2 sticky left-0 top-0 items-center lg:px-12 px-6">
         {/* brand  */}
         {/* <div> */}
         <Link
@@ -31,9 +31,13 @@ const Navbar = () => {
           onClick={() => setMobileNav(false)}
         >
           {/* <div className="bg-black rounded-3xl"> */}
-          <Roll left>
-            <Image src={constants.logo} alt="logo" className="w-24 h-16" />
-          </Roll>
+          <Fade left>
+            <Image
+              src={constants.logo}
+              alt="logo"
+              className="w-24 h-16 bg-transparent"
+            />
+          </Fade>
           {/* </div> */}
 
           <Fade delay={800} top>

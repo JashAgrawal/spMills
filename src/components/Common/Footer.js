@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import constants from "@/utils/constants";
+import constants, { toEmail } from "@/utils/constants";
 import Curvy from "@/assests/curvy";
 import FotterSection from "./FotterSection";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export default function Footer() {
                   <Image
                     src={constants.logo}
                     className="h-8 w-8 mr-3 rounded-full"
-                    alt="SP Silk Mills Logo"
+                    alt="Surya Prakash Silk Mills"
                   />
                   <span className="self-center  text-2xl font-semibold whitespace-nowrap dark:text-white">
                     {constants.name}
@@ -41,7 +41,7 @@ export default function Footer() {
                     { title: "Mobile", path: `tel:+91${constants.mobile}` },
                     {
                       title: "Email",
-                      path: `https://mail.google.com/mail/?view=cm&fs=1&to=${constants.email}`,
+                      path: `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}`,
                     },
                   ]}
                 />
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="https://suryaprakashsilkmills.com/"
                   className="hover:underline"
                 >
-                  SP Silk Mills™
+                  {constants.name}
                 </a>
                 . All Rights Reserved.
               </span>

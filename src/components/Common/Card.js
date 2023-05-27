@@ -21,7 +21,7 @@ export default function Card({ image, title, buttonText }) {
       <Roll right>
         <div className="absolute pb-24 flex w-full h-full flex-col top-0 left-0 justify-end items-center">
           <h1
-            style={{ textShadow: "2px 5px #000" }}
+            // style={{ textShadow: "2px 5px #000" }}
             className="lg:text-4xl drop-shadow-xl shadow-black text-sm mb-4 font-semibold text-white"
           >
             {title}

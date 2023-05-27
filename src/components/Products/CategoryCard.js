@@ -1,26 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import { Slide } from "react-reveal";
 
 const CategoryCard = (props) => {
-  const { title, otherImages, image, details } = props.category;
+  const { title, otherImages, image, details, categoryID } = props.category;
   const [activeImg, setActiveImg] = useState(image);
+  const router = useRouter();
+  const currentId = router.asPath.split("#")[1];
+  useEffect(() => {
+    if (currentId) {
+      const ele = document.getElementById(currentId);
+      // ele.scrollIntoView();
+      window.scrollTo({
+        left: 0,
+        top: ele.offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
+  }, []);
   // const [h, setH] = useState(false);
   return (
     // <>
 
     <div
       // onMouseEnter={() => setH(!h)}
-      id={`${title}`}
+      id={`${title.replace(" ", "%20")}`}
       className="group h-full group-hover:bg-opacity-60 transition duration-500 relative bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 sm:p-24 py-24 px-6 flex justify-center items-center"
     >
-      <Link
-        href={{
-          pathname: "/contact-us",
-          query: { message: `I want to Know More About ${title} Product` },
-        }}
-      >
+      <Link href={`/productDetail/${categoryID}`}>
         <Slide
           left={props.index % 2 == 0 ? true : false}
           right={props.index % 2 !== 0 ? true : false}
@@ -37,7 +46,7 @@ const CategoryCard = (props) => {
       <div className="absolute sm:top-8 top-4 left-4 sm:left-8 flex justify-start items-start flex-col space-y-2">
         <div>
           <p
-            style={{ textShadow: "2px 5px #000" }}
+            // style={{ textShadow: "2px 5px #000" }}
             className=" transition duration-500 text-2xl border-b-2 pb-2 border-accent leading-5 text-gray-600 dark:text-white"
           >
             {title}
