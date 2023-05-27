@@ -16,6 +16,7 @@ export default function MessageBanner(props) {
         }] justify-center  overflow-hidden`}
       >
         <Image
+          quality={50}
           src={props.image || handShake}
           className={`opacity-90 lg:h-[${
             props.height || 70
