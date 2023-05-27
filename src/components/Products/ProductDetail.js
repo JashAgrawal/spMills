@@ -55,7 +55,7 @@ const ProductDetail = () => {
               style={{ objectFit: "fill" }}
               // className="group-hover:opacity-60 h-full object-cover object-center transition duration-500"
               // src="https://i.ibb.co/q79KfQr/pexels-pixabay-276583-removebg-preview-1.png"
-              alt="sofa-2"
+              alt="Product Image"
             />
           </div>
           <div className="md:hidden flex space-x-4 h-full w-full">
@@ -91,7 +91,7 @@ const ProductDetail = () => {
               >
                 <Image
                   src={img}
-                  quality={1}
+                  quality={75}
                   className="h-72 object-cover object-top"
                   // className="group-hover:opacity-60 h-full object-cover object-center transition duration-500"
                   // src="https://i.ibb.co/q79KfQr/pexels-pixabay-276583-removebg-preview-1.png"

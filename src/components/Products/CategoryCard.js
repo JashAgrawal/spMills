@@ -22,8 +22,6 @@ const CategoryCard = (props) => {
   }, []);
   // const [h, setH] = useState(false);
   return (
-    // <>
-
     <div
       // onMouseEnter={() => setH(!h)}
       id={`${title.replace(" ", "%20")}`}
@@ -37,6 +35,7 @@ const CategoryCard = (props) => {
           <Image
             // onMouseLeave={setH(!h)}
             src={activeImg}
+            quality={75}
             className=" h-full object-cover object-center transition duration-500"
             // src="https://i.ibb.co/q79KfQr/pexels-pixabay-276583-removebg-preview-1.png"
             alt="sofa-2"
@@ -71,7 +70,6 @@ const CategoryCard = (props) => {
         </p>
       </div>
     </div>
-    // </>
   );
 };
 

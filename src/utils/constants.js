@@ -87,7 +87,7 @@ export const productCategories = [
     // path: `/organic`,
     otherImages: [FS1],
     activeIndex: 0,
-    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+    details: "40 Pc × 40 Pc",
   },
   {
     categoryID: "7",
@@ -96,7 +96,7 @@ export const productCategories = [
     // path: `/organic`,
     otherImages: [SM1],
     activeIndex: 0,
-    details: "2/80 Pc + 80/300 Dyed x 40pc white + 80/300 Dyed",
+    details: "2/60 Vishakaa + 150/300 Dyed × 2/60 Vishakaa + 150 / 300 Dyed",
   },
   {
     categoryID: "8",

@@ -12,6 +12,7 @@ export default function Card({ image, title, buttonText }) {
       <div className="bg-black">
         {/* <Flip left> */}
         <Image
+          quality={75}
           src={image}
           className="w-full h-full duration-500 opacity-80 ease-in-out object-contain"
           alt={`${title} Category image`}
