@@ -35,7 +35,7 @@ const CategoryCard = (props) => {
           <Image
             // onMouseLeave={setH(!h)}
             src={activeImg}
-            quality={75}
+            quality={40}
             className=" h-full object-cover object-center transition duration-500"
             // src="https://i.ibb.co/q79KfQr/pexels-pixabay-276583-removebg-preview-1.png"
             alt="sofa-2"

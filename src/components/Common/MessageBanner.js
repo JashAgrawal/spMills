@@ -16,7 +16,7 @@ export default function MessageBanner(props) {
         }] justify-center  overflow-hidden`}
       >
         <Image
-          quality={50}
+          quality={60}
           src={props.image || handShake}
           className={`opacity-90 lg:h-[${
             props.height || 70
@@ -25,7 +25,7 @@ export default function MessageBanner(props) {
         />
         <div className="flex w-full h-full overflow-hidden space-y-8 flex-col items-center justify-center absolute top-0 left-0">
           <h1
-            style={{ textShadow: "2px 2px #fb923c" }}
+            style={{ textShadow: "2px 5px 5px #000" }}
             className="md:text-5xl text-2xl  text-white font-bold"
           >
             {props.message}
