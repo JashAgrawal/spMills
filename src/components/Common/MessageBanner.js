@@ -25,7 +25,7 @@ export default function MessageBanner(props) {
         <div className="flex w-full h-full overflow-hidden space-y-8 flex-col items-center justify-center absolute top-0 left-0">
           <h1
             style={{ textShadow: "2px 2px #fb923c" }}
-            className="text-5xl  text-white font-bold"
+            className="md:text-5xl text-2xl  text-white font-bold"
           >
             {props.message}
           </h1>
