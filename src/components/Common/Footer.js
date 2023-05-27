@@ -1,10 +1,18 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import constants, { toEmail } from "@/utils/constants";
 import Curvy from "@/assests/curvy";
 import FotterSection from "./FotterSection";
 import Link from "next/link";
 export default function Footer() {
+  const [mailURl, setMailURl] = useState(`mailto:${toEmail}`);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.screen.width > 768) {
+        setMailURl(`https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}`);
+      }
+    }
+  }, []);
   return (
     <div>
       <Curvy direction="up" color={"#fb923c"} />
@@ -41,7 +49,7 @@ export default function Footer() {
                     { title: "Mobile", path: `tel:+91${constants.mobile}` },
                     {
                       title: "Email",
-                      path: `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}`,
+                      path: mailURl,
                     },
                   ]}
                 />

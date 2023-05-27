@@ -1,8 +1,16 @@
 import constants, { toEmail, waContact } from "@/utils/constants";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function LeftSection() {
   const currentColor = "#fb923c";
+  const [mailURl, setMailURl] = useState(`mailto:${toEmail}`);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.screen.width > 768) {
+        setMailURl(`https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}`);
+      }
+    }
+  }, []);
   return (
     <div>
       <div className="flex flex-col justify-between">
@@ -11,19 +19,16 @@ export default function LeftSection() {
             Lets talk about Everything!
           </h2>
           <div className="text-gray-700 mt-8">
-            Hate forms? Send us an
-            <a
-              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}`}
-              className="underline px-1"
-            >
-              email
+            Hate forms? Contact us on
+            <a href={mailURl} className="underline px-1 text-blue-500">
+              EMAIL
             </a>
             /
             <a
               href={`https://wa.me/${constants.mobile}`}
-              className="underline px-1"
+              className="underline px-1 text-green-500"
             >
-              whatsapp
+              WHATSAPP
             </a>
             instead.
           </div>
