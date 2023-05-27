@@ -34,6 +34,7 @@ export default function HomeComp() {
             className=" h-[40vh] md:h-[88vh] w-full object-fill"
             autoPlay
             muted
+            loop
             controls={false}
           />
         </div>
