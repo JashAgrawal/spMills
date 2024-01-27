@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
         <>
           <HeadComp />
           <Component {...pageProps} />
-          <GoogleAnalytics gaId="G-EMBJP8YQ7C" />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           <Footer />
         </>
       )}
