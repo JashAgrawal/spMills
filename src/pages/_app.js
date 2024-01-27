@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useRouter } from "next/router";
 import Loading from "@/components/loading/loading";
 import { useEffect, useState } from "react";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -32,6 +32,7 @@ export default function App({ Component, pageProps }) {
         <>
           <HeadComp />
           <Component {...pageProps} />
+          <GoogleAnalytics gaId="G-EMBJP8YQ7C" />
           <Footer />
         </>
       )}
