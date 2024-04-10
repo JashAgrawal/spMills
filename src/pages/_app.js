@@ -7,6 +7,40 @@ import { useRouter } from "next/router";
 import Loading from "@/components/loading/loading";
 import { useEffect, useState } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+
+export const metadata = {
+  title: {
+    template: "%s | Surya Praksh Silk Mills",
+    default: "Surya Praksh Silk Mills",
+  },
+  category: "textile industry",
+  keywords: [
+    "Surya Praksh Silk Mills",
+    "fabric manufacturing",
+    "textile products",
+    "silk mills",
+    "uniform suppliers",
+    "textile industry Bhiwandi",
+    "textile manufacturing",
+    "quality fabric products",
+    "textile manufacturing unit",
+    "fabric production capacity",
+    "textile manufacturing India",
+    "BOMBAY FILAFIL",
+    "FILAFIL",
+    "FILAFIL PLUS",
+    "FILAFIL DOTS",
+    "FILAFIL PRO",
+    "FOUR SEASON",
+    "SAMRAY",
+    "SIGNATURE",
+    "SUPREMO",
+  ],
+  viewport: "width=device-width, initial-scale=1.0",
+  description:
+    "Discover the legacy of Surya Praksh Silk Mills in the textile industry. From humble beginnings with 6 powerlooms in a 600 sqft rented shed to a modern manufacturing unit spanning 28000 sqft, we specialize in producing quality fabrics. Our monthly capacity of 500000 meters serves customers across India. Explore our product categories: BOMBAY FILAFIL, FILAFIL, FILAFIL PLUS, FILAFIL DOTS, FILAFIL PRO, FOUR SEASON, SAMRAY, SIGNATURE, SUPREMO.",
+};
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
