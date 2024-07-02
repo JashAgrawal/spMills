@@ -15,6 +15,7 @@ export default function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await sendContactForm({ name, email, message });
+    alert("Thank You Our Team Will Contact you shortly");
   };
   return (
     <div>
